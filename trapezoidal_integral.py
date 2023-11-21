@@ -12,9 +12,7 @@ while count <= 100:
     terms = []
     terms.append((h / 2)*((sin(0 + (count - 1)* h) + sin(0 + count * h))))
     count += 1
-    if count > 100:
-        break
-print(terms)
+    
 
 #リストに入れた項の総和を出す
 def sygma(terms):
