@@ -9,3 +9,4 @@ while True:
         break
 epsilon = (1 / 2) **count
 print(epsilon)
+
