@@ -3,23 +3,25 @@ from math import sin
 # print(sin(0))
 # >>> 0
 # -----------
+
 import math
-h = ( math.pi*(1/2)- 0)/ 100
+
+a = 0
+b = math.pi / 2
+n = 100
+
+h = (b - a)/ n
 count = 1
-
-#while文で初項から100項までリストに入れる
-while count <= 100:
-    terms = []
-    terms.append((h / 2)*((sin(0 + (count - 1)* h) + sin(0 + count * h))))
-    count += 1
+terms = []
+#for文で初項から100項までリストに入れる
+for count in range(1,(n + 1)):
     
-
-#リストに入れた項の総和を出す
-def sygma(terms):
-    s = 0
-    for i in range (0, len(terms)):
-        s = s + terms[i]
-        return s
-print(sygma(terms))
+    term = (h / 2)*((sin(a + (count - 1)* h) + sin(a + count * h)))
+    
+    terms.append(term)
+#リストに入れた項の総和を出す(sum関数を使った方が楽！)
+#sum(list)でlistの総和を出せる！
+#print(sum(list))で合計表示できる！
+print(sum(terms))
     
         

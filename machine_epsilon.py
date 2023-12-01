@@ -1,12 +1,11 @@
 # TODO
 #εを1/2し続ける
-count = 1
-
-while True:
-    1 + (1 / 2) **count
-    count = count + 1
-    if 1 + (1 / 2) **count <= 1:
-        break
-epsilon = (1 / 2) **count
+EPS = 1
+#今回は左辺が1を超えない時のepsilonの値が欲しい→計算作業の後の値を出力するとギリギリ1を超えた時のεの値が出力されてしまう！
+while 1 + EPS > 1:
+    #ループ処理前の値を拾えるようにepsilonに置き換えた
+    epsilon = EPS
+    EPS = EPS / 2
+    
 print(epsilon)
 
