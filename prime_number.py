@@ -15,8 +15,7 @@ def  primalitytest(number):
         number % i   
         if number % i == 0:
                 return('{}は素数でない'.format(number))
-                
-        elif  i == (number - 1):
+        elif i == (number - 1):
                 return('{}は素数'.format(number))
 print(primalitytest(int(a)))
 print(primalitytest(int(b)))

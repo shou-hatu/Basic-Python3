@@ -11,11 +11,7 @@ def mygcd(a ,b):
         a,b = b,r
         r = a % b
     return b    
-        
-
-print(mygcd(10,20))
-print(mygcd(14,91))
-print(mygcd(91,14))
+print('最大公約数は{}'.format(mygcd(int(a),int(b))))
 
 
 
